@@ -73,8 +73,13 @@ public class testListUtil {
 		assertEquals(-1, ListUtil.binarySearch(array4, 123));
 	}
 
+	@Test 
+	public void testEmtyArrayBinarySearch(){
+		String [] emty = {};
+		assertEquals(-1 , ListUtil.binarySearch(emty, "ei"));
+	}
 	@Test(expected = IllegalArgumentException.class)
-	public void testFindNull() {
+	public void testFindNullBinarySearch() {
 		String[] array = { "a", "o", "g" };
 		assertEquals("d", ListUtil.binarySearch(array, null));
 		Integer[] array2 = { 9, 2, 5 };

@@ -28,6 +28,7 @@ public class ListUtil {
 	 * @param array a array of elements
 	 * @param element element that user want to find index
 	 * @return index of element
+	 * @throw IllegalArgumentException when element == null
 	 */
 	public static <T extends Comparable<? super T>> int binarySearch(T[] array, T element) {
 		final int notFound = -1 ;
@@ -48,15 +49,6 @@ public class ListUtil {
 			}
 		}
 		return notFound;
-	}
-	
-	public static void main (String args[]) {
-		String i = "a";
-		String j = "b" ;
-		Integer x = 1;
-		Integer y = 2;
-		System.out.println(i.compareTo(j));
-		System.out.println(x.compareTo(y));
 	}
 }
 
